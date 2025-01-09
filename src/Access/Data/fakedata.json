@@ -1,0 +1,52 @@
+[
+    {
+        "id_SanPham": 1,
+        "id_DanhMuc": 101,
+        "id_GiaSanPham": 201,
+        "thuongHieu": "Samsung",
+        "moTa": "Điện thoại thông minh",
+        "tonKho": 50.0,
+        "ngayTao": "2025-01-01T08:00:00",
+        "ngayCapNhat": "2025-01-03T10:00:00"
+    },
+    {
+        "id_SanPham": 2,
+        "id_DanhMuc": 102,
+        "id_GiaSanPham": 202,
+        "thuongHieu": "Apple",
+        "moTa": "Laptop cao cấp",
+        "tonKho": 30.0,
+        "ngayTao": "2025-01-02T08:00:00",
+        "ngayCapNhat": "2025-01-04T10:00:00"
+    },
+    {
+        "id_SanPham": 3,
+        "id_DanhMuc": 103,
+        "id_GiaSanPham": 203,
+        "thuongHieu": "Sony",
+        "moTa": "Tivi thông minh",
+        "tonKho": 20.0,
+        "ngayTao": "2025-01-03T08:00:00",
+        "ngayCapNhat": "2025-01-05T10:00:00"
+    },
+    {
+        "id_SanPham": 4,
+        "id_DanhMuc": 104,
+        "id_GiaSanPham": 204,
+        "thuongHieu": "LG",
+        "moTa": "Máy giặt cửa trước",
+        "tonKho": 15.0,
+        "ngayTao": "2025-01-04T08:00:00",
+        "ngayCapNhat": "2025-01-06T10:00:00"
+    },
+    {
+        "id_SanPham": 5,
+        "id_DanhMuc": 105,
+        "id_GiaSanPham": 205,
+        "thuongHieu": "Panasonic",
+        "moTa": "Tủ lạnh cao cấp",
+        "tonKho": 10.0,
+        "ngayTao": "2025-01-05T08:00:00",
+        "ngayCapNhat": "2025-01-07T10:00:00"
+    }
+]
