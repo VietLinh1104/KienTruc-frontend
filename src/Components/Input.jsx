@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "./Select";
 
-function Input({ id, type, className, name, selectData = ["none"], resultValue, placeholder,setValue = '',nullable = true}) {
+function Input({ id, type, className, name, selectData = ["none"], resultValue, placeholder,setValue = '',nullable = true, fieldClassName}) {
   const [textValue, setTextValue] = useState(setValue);
 
   const handleChange = (event) => {
@@ -19,7 +19,7 @@ function Input({ id, type, className, name, selectData = ["none"], resultValue, 
   };
 
   return (
-    <div className="flex flex-col col-span-2 space-y-2">
+    <div className={ `flex flex-col col-span-2 space-y-2 ${fieldClassName}`}>
       <label htmlFor={id} className="font-medium">
         {name}
       </label>

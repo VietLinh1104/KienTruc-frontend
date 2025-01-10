@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Form from "../Components/Form";
 import Input from "../Components/Input";
 
-import productApi from '../Services/productApi';
+import productApi, { sanPhamApi } from '../Services/productApi';
 
 function AddProduct() {
   const [formData, setFormData] = useState({}); // State để lưu dữ liệu form
@@ -32,7 +32,6 @@ function AddProduct() {
     }
   };
 
-
   return (
     <div className="grid grid-cols-6 gap-4">
       <Form className="col-span-4">
@@ -40,7 +39,7 @@ function AddProduct() {
         <Input
           type="text"
           name="Tên Sản Phẩm"
-          id="name"
+          id="idSanPham"
           nullable = {false}
           resultValue={handleInputChange}
         />
@@ -48,7 +47,7 @@ function AddProduct() {
         <Input
           type="number"
           name="Giá Sản Phẩm"
-          id="price"
+          id="gia"
           nullable = {false}
           resultValue={handleInputChange}
         />
@@ -56,7 +55,7 @@ function AddProduct() {
         <Input
           type="select"
           name="Thương Hiệu"
-          id="brand"
+          id="nhaCungCap"
           selectData={selectData}
           resultValue={handleInputChange}
         />
@@ -64,7 +63,7 @@ function AddProduct() {
         <Input
           type="select"
           name="Danh Mục"
-          id="category"
+          id="tenSanPham"
           selectData={selectData}
           resultValue={handleInputChange}
         />
@@ -72,18 +71,11 @@ function AddProduct() {
         <Input
           type="number"
           name="Tồn Kho"
-          id="quantity"
+          id="soLuong"
           nullable = {false}
           resultValue={handleInputChange}
         />
 
-        <Input
-          type="text"
-          name="Mô Tả"
-          id="description"
-          nullable = {false}
-          resultValue={handleInputChange}
-        />
 
 
         <button type="submit" onClick={handleSend} className="col-span-1 bg-blue-500 text-white rounded-lg row-start-4 py-1">

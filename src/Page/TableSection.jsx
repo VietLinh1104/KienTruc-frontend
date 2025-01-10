@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import {useNavigate } from "react-router-dom";
 import Table from "../Components/Table";
-import productApi from "../Services/productApi";
+import productApi, { sanPhamApi } from "../Services/productApi";
 
-const header = ["ID Sản Phẩm", "Tên Sản PhẩmPhẩm", "Mô Tả", "Giá", "Tồn Kho"];
+const header = ["ID Sản Phẩm", "Tên Sản Phẩm", "Mô Tả", "Giá"];
 
 function TableSection() {
   const navigate = useNavigate();
@@ -47,7 +47,6 @@ function TableSection() {
   const handleEditClick = (param) =>{
     navigate(`/products/update/${param}`);
   }
-
   return (
     <>
       <Table data={products} header={header} onDeleteClick={handleDelete} onAddClick={handleAddClick} onEditClick={handleEditClick}/>

@@ -14,7 +14,7 @@ const Table = ({ data, header , onDeleteClick, onAddClick, onEditClick}) => {
   const handleSelectAll = (checked) => {
     if (checked) {
       // Tích tất cả checkbox
-      const allIds = data.map((item) => item.id);
+      const allIds = data.map((item) => item.id_product); // sử dụng id_product làm key
       setSelectedItems(allIds);
     } else {
       // Bỏ tích tất cả
@@ -22,8 +22,8 @@ const Table = ({ data, header , onDeleteClick, onAddClick, onEditClick}) => {
     }
     setSelectAll(checked);
   };
+  
 
-  // Hàm thay đổi checkbox
   const handleCheckboxChange = (id, checked) => {
     setSelectedItems((prev) => {
       if (checked) {
@@ -93,21 +93,21 @@ const Table = ({ data, header , onDeleteClick, onAddClick, onEditClick}) => {
         {/* BODY */}
         <tbody>
           {Array.isArray(data) && data.map((item) => (
-            <tr key={item.id_product}>
+            <tr key={item.id}>
               <td>
                 <input
                   type="checkbox"
-                  name={item.id_product}
-                  id={item.id_product}
-                  checked={selectedItems.includes(item.id_product)}
-                  onChange={(e) => handleCheckboxChange(item.id_product, e.target.checked)}
+                  name={item.id}
+                  id={item.id}
+                  checked={selectedItems.includes(item.id)}
+                  onChange={(e) => handleCheckboxChange(item.id, e.target.checked)}
                 />
               </td>
               {Object.entries(item).map(([key, value]) => (
                 <td key={key}>{value}</td>
               ))}
               <td>
-                <button className="text-blue-500 hover:underline" onClick={()=>{onEditClick(item.id_product)}}>Edit</button>
+                <button className="text-blue-500 hover:underline" onClick={()=>{onEditClick(item.id)}}>Edit</button>
               </td>
             </tr>
           ))}
