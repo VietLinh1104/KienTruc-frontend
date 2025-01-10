@@ -99,8 +99,8 @@ const Table = ({ data, header , onDeleteClick, onAddClick, onEditClick}) => {
                   type="checkbox"
                   name={item.id_product}
                   id={item.id_product}
-                  checked={selectedItems.includes(item.id)}
-                  onChange={(e) => handleCheckboxChange(item.id, e.target.checked)}
+                  checked={selectedItems.includes(item.id_product)}
+                  onChange={(e) => handleCheckboxChange(item.id_product, e.target.checked)}
                 />
               </td>
               {Object.entries(item).map(([key, value]) => (

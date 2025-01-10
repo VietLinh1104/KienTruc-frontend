@@ -33,12 +33,14 @@ function SignIn() {
           type="text"
           name="Username"
           id="username"
+          className='col-span-4'
           resultValue={handleInputChange}
         />
         <Input
           type="password"
           name="Password"
           id="password"
+          className='col-span-4'
           resultValue={handleInputChange}
         />
       </Form>
