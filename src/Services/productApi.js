@@ -11,9 +11,9 @@ const productApi = {
     return axiosInstance.get("/products/get-all");
   },
 
-  // Lấy sản phẩm theo danh sách ID
-  findProductsByIds: (ids) => {
-    return axiosInstance.post("/products/find-by-ids", ids);
+  // Lấy sản phẩm theo ID
+  getProductById: (id) => {
+    return axiosInstance.get(`/products/get-all-by-id/${id}`);
   },
 
   // Cập nhật sản phẩm theo ID
@@ -21,9 +21,9 @@ const productApi = {
     return axiosInstance.put(`/products/update/${id}`, updatedProduct);
   },
 
-  // Xóa nhiều sản phẩm theo danh sách ID
-  deleteProducts: (ids) => {
-    return axiosInstance.delete("/products/delete", { data: ids });
+  // Xóa sản phẩm theo ID
+  deleteProductById: (id) => {
+    return axiosInstance.delete(`/products/delete/${id}`);
   },
 };
 

@@ -8,6 +8,8 @@ const tab = {
     'Trang Chủ': '/',
     'Sản Phẩm': '/products',
     'Thương Hiệu': '/brand',
+    'Nhà Cung Cấp': '/supplier',
+    'Danh Mục': '/categories',
 };
 
 function Sidebar() {
